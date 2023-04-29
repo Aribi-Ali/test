@@ -34,6 +34,33 @@ return [
     */
 
     'mailers' => [
+        
+
+
+            
+            'mailjet' => [
+                'key' => env('MAILJET_APIKEY'),
+                'secret' => env('MAILJET_APISECRET'),
+                'transactional' => [
+                    'call' => true,
+                    'options' => [
+                        'url' => 'api.mailjet.com',
+                        'version' => 'v3.1',
+                        'call' => true,
+                        'secured' => true
+                    ]
+                ],
+                'common' => [
+                    'call' => true,
+                    'options' => [
+                        'url' => 'api.mailjet.com',
+                        'version' => 'v3',
+                        'call' => true,
+                        'secured' => true
+                    ]
+                ]
+            
+                    ],
         'smtp' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
@@ -98,8 +125,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'netPrime@netPrime.dz'),
+        'name' => env('MAIL_FROM_NAME', 'netPrime'),
     ],
 
     /*
@@ -112,6 +139,9 @@ return [
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
+
+
+    
 
     'markdown' => [
         'theme' => 'default',

@@ -5,11 +5,15 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+  <title>  @yield("title")</title>
   <meta name="author" content="name">
+
+  @yield("css")
+
   <meta name="description" content="description here">
   <meta name="keywords" content="keywords,here">
-  
+  <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <!--Totally optional :) -->
@@ -18,7 +22,12 @@
   @vite('resources/css/app.css')
 </head>
 <body>
-    @yield("content")
-  </h1>
+  
+  @yield("content")
+  
+  
+  
+  @yield("scripts")
 </body>
+
 </html>
